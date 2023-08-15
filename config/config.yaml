@@ -1,0 +1,11 @@
+training_pipeline_config:
+  pipeline_name: customer_segmentation_Artifacts
+  artifact_dir: artifact
+
+
+data_ingestion_config:
+  dataset_download_url: "https://github.com/shashank1623/online_reatail/blob/master/Online_Retail.zip"
+  ingested_dir: ingested_Data
+  raw_data_dir: raw_data
+  ingested_train_dir : train_Data
+  ingested_test_dir : test_Data
