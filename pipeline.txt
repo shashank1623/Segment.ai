@@ -5,3 +5,9 @@ data validation steps
 
 config.yaml >> schema.yaml >>config entity >> artifact entity >> constatn file >> configurations >> 
 raw_data_validation file under our config entity file >> data_validation .py under our componets foler >> pipleine file
+
+
+#model training steps
+
+config.yaml >> config entity >> artifact entity >> constant file >> configurations >> model trainer >> helper function under 
+our utils file >> pipleine file
