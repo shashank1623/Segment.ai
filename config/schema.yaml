@@ -1,0 +1,13 @@
+FileName: Online_Retail.csv
+NumberOfColumns: 8
+
+ColumnNames:
+  Country: object
+  CustomerID: int64
+  Description: object
+  InvoiceDate: object
+  InvoiceNo: object
+  Quantity: int64
+  StockCode: object
+  UnitPrice: float64
+  

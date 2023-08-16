@@ -67,7 +67,39 @@ class Configuration:
         except Exception as e:
             raise CustomException(e,sys) from e
         
+    def get_data_validation_config(self) -> DataValidationConfig:
+        try:
+            artifact_dir = self.training_pipeline_config.artifact_dir
 
+            data_validation_artifact_dir=os.path.join(
+                artifact_dir,
+                DATA_VALIDATION_ARTIFACT_DIR,
+                self.time_stamp
+            )
+            data_validation_config = self.config_info[DATA_VALIDATION_CONFIG_KEY]
+            
+            validated_path=os.path.join(data_validation_artifact_dir,DATA_VALIDATION_VALID_DATASET)
+            
+            validated_train_path=os.path.join(data_validation_artifact_dir,validated_path,DATA_VALIDATION_TRAIN_FILE)
+            
+          
+
+
+            schema_file_path = os.path.join(
+                ROOT_DIR,
+                data_validation_config[DATA_VALIDATION_SCHEMA_DIR_KEY],
+                data_validation_config[DATA_VALIDATION_SCHEMA_FILE_NAME_KEY]
+            )
+            
+
+            data_validation_config = DataValidationConfig(
+                schema_file_path=schema_file_path,validated_train_path=validated_train_path)
+            
+            return data_validation_config
+        except Exception as e:
+            raise CustomException(e,sys) from e
+        
+        
     def get_training_pipeline_config(self)->TrainingPipelineConfig:
         try:
             training_pipeline_config = self.config_info[TRAINING_PIPELINE_CONFIG_KEY]

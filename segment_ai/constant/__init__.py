@@ -15,3 +15,4 @@ CONFIG_FILE_PATH= os.path.join(ROOT_DIR, CONFIG_DIR, CONFIG_FILE_NAME)
 
 from segment_ai.constant.training_pipeline import *
 from segment_ai.constant.training_pipeline.data_ingestion import *
+from segment_ai.constant.training_pipeline.data_validation import *

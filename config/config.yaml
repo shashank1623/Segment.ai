@@ -9,3 +9,9 @@ data_ingestion_config:
   raw_data_dir: raw_data
   ingested_train_dir : train_Data
   ingested_test_dir : test_Data
+
+data_validation_config:
+  schema_dir: config
+  schema_file_name: schema.yaml 
+  Train_data: Train_data
+  Test_data: Test_data
