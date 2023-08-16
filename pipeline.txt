@@ -1,0 +1,7 @@
+config.yaml >> config entity folder >> constant >> configurations >> data injgestion >> utils for helper function >>
+pipleine folder >> app.py
+
+data validation steps 
+
+config.yaml >> schema.yaml >>config entity >> artifact entity >> constatn file >> configurations >> 
+raw_data_validation file under our config entity file >> data_validation .py under our componets foler >> pipleine file
